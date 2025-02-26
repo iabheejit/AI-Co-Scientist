@@ -14,18 +14,22 @@ An advanced research assistant that utilizes AI agents to generate novel researc
 
 ```
 ai-co-scientist/
-├── backend/           # Flask API backend
-│   ├── app.py         # Main backend application
-│   └── requirements.txt
-├── frontend/          # React frontend
-│   ├── public/
+├── backend/
+│   ├── api/
+│   │   └── index.py         # Vercel serverless function handler
+│   ├── app.py               # Main backend application
+│   └── requirements.txt     # Python dependencies
+├── frontend/
 │   ├── src/
-│   │   ├── App.js
-│   │   └── ...
-│   ├── package.json
-│   └── ...
-├── vercel.json        # Vercel configuration
-└── README.md
+│   │   ├── App.js           # Main React component
+│   │   └── index.js         # React entry point
+│   ├── .env.development     # Local development config
+│   ├── .env.production      # Production config
+│   └── package.json         # NPM dependencies & scripts
+├── .gitignore               # Git ignore patterns
+├── DEPLOY.md                # Deployment instructions
+├── README.md                # Project documentation
+└── vercel.json              # Vercel configuration
 ```
 
 ## Local Development Setup
